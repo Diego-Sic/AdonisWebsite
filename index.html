@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--==================== UNICONS ====================-->
-        
-        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!--==================== SWIPER CSS ====================-->
         <link rel="stylesheet" href="">
         
@@ -17,9 +16,23 @@
     </head>
     <body>
         <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav__container">
-                
+        <header class="l-header scroll-header" id="header">
+            <nav class="nav container">
+                <a href="" class="nav__logo">Gua-to-Usa</a>
+
+                <div class="nav__menu" id="nav-menu">
+                     <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#Introduction" class="nav__link">Introduction</a></li>
+                        <li class="nav__item"><a href="#Steps" class="nav__link">Steps</a></li>
+                        <li class="nav__item"><a href="#Advices" class="nav__link">Advices</a></li>
+                        <li class="nav__item"><a href="#Resources" class="nav__link">Resources</a></li>
+                     </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
             </nav>
         </header>
 
@@ -83,6 +96,6 @@
         <script src=""></script>
 
         <!--==================== MAIN JS ====================-->
-        <script src=""></script>
+        <script src="./JavaScript/script.js"></script>
     </body>
 </html>
