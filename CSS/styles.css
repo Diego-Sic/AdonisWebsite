@@ -115,12 +115,13 @@ img{
 .section__title{
     font-size: var(--h1--font-size);
     color: var(--first-color);
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-1);
 }
 .section__subtitle{
     display: block;
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-4);
 }
 
 .button--flex{
@@ -216,14 +217,14 @@ img{
 
 .scroll-header{
     background-color: var(--first-color-lighten);
-    box-shadow: 0 2px 4pxr rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.scroll-header .nav__logo, .scroll-header  .nav__toggle, .scroll-header .nav__link{
+.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link{
     color: var(--first-color-dark);
 }
 
-.scroll-header, .nav__menu{
+.scroll-header .nav__menu{
     background-color: var(--first-color-lighten);
 }
 
@@ -279,14 +280,17 @@ img{
 }
 
 /* ========Introduction========= */
-
 .introduction{
-    padding: 1.5rem;
+    margin: 0 0 3rem 0;
+}
+
+.introduction__container{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-items: center;
     align-items: center;
 }
+
 .titles{
     display: flex;
     flex-direction: column;
@@ -309,6 +313,14 @@ img{
 
 /* ===========STEPS============= */
 
+.steps{
+    padding: 0 1rem;
+}
+
+.steps__container{
+    justify-content: center;
+    align-items: center;
+}
 .steps__tabs{
     display: flex;
     justify-content: space-evenly;
@@ -374,4 +386,49 @@ img{
 
 .steps__active[data-content]{
     display: block;
+}
+
+/* =============Media queries=============== */
+
+@media screen and (min-width:576px) {
+    .introduction__container{
+        display: grid;
+        grid-template-columns: max-content 30%;
+        column-gap: 2rem;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:768px) {
+    body{
+        margin: 0;
+    }
+
+    .section{
+        padding-top: 6rem;
+    }
+    
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__list{
+        display: flex;
+    }
+
+    .nav__item{
+        margin-left: var(--mb-5);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
