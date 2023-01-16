@@ -316,10 +316,15 @@ img{
 .steps{
     padding: 0 1rem;
 }
+ 
+.steps__data{
+    justify-items: center;
 
+}
 .steps__container{
     justify-content: center;
     align-items: center;
+    margin: 0.2rem;
 }
 .steps__tabs{
     display: flex;
@@ -328,7 +333,7 @@ img{
 }
 
 .steps__button{
-    font-size: var(--h3--font-size);
+    font-size: 0.937rem;
     font-weight: var(--font-medium);
     cursor: pointer;
 }
