@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="">
         
         <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
         <link rel="stylesheet" href="./CSS/styles.css">
 
         <title>Responsive Portfolio Website</title>
@@ -50,7 +51,7 @@
                     </div>
 
                     <div class="home__img">
-                        <img src="./Assets/About_me.svg" alt="">
+                        <img src="./Assets/taylor-flowe-NTur2_QKpg0-unsplash.jpg" alt="">
                     </div>
                 </div>
             </section>
@@ -60,9 +61,9 @@
                 <h2 class="section__title">Introduction</h2>
                 <h3 class="section__subtitle">The luck favors the brave</h3>
 
-                <div class="introduction__container container ">
-                    <div class="introduction__img">
-                        <img src=".//Assets/About_me.svg" alt="">
+                <div class="introduction__container container grid">
+                    <div class="introduction__img_box">
+                        <img class="introduction__img" src="./Assets/introduction image.jpg" alt="">
                     </div>
 
                     <div class="introduction__data">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem 
@@ -267,6 +268,8 @@
                     <!-- ==============First case=============== -->
                     <div class="advice__case">
 
+                        <h2 class="main_advice__title">Sat</h2>
+
                         <div class="advice">
                             <h2 class="advice__title">First advice</h2>
                             <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -302,6 +305,8 @@
 
                     <!-- ==============Second case=============== -->
                     <div class="advice__case">
+
+                        <h2 class="main_advice__title">No Sat</h2>
 
                         <div class="advice">
                             <h2 class="advice__title">Second advice</h2>
@@ -339,20 +344,86 @@
             </section>
             <!--==================== SERVICES ====================-->
             <section class="resources section section" id="resources">
-                
+                <h2 class="section__title">Resources</h2>
+                <h3 class="section__subtitle">"Lorem ipsum"</h3>
+
+                <div class="resources__container swiper mySwiper container grid">
+                    <div class="swiper-wrapper">
+                        <div class="resource__box swiper-slide">
+                            <h2 class="resource__title">TOEFL</h2>
+                            <ul class="unorderlist_resource">
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                            </ul>
+                        </div>
+                        <div class="resource__box swiper-slide">
+                            <h2 class="resource__title">SAT</h2>
+                            <ul class="unorderlist_resource">
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                            </ul>
+                        </div>
+                        <div class="resource__box swiper-slide">
+                            <h2 class="resource__title">Recommendation letters</h2>
+                            <ul class="unorderlist_resource">
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                            </ul>
+                        </div>
+                        <div class="resource__box swiper-slide">
+                            <h2 class="resource__title">Common App</h2>
+                            <ul class="unorderlist_resource">
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li class="resource">Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
+
+                </div>
             </section>
         <!--==================== FOOTER ====================-->
         <footer class="footer">
-         
+                <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__tittle">Gua-to-Usa</h1>
+                    <span class="footer__subtittle">Education is for everyone</span>
+                </div>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
-
-        <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
-
         <!--==================== MAIN JS ====================-->
+        
+        <script src="./JavaScript/swiper-bundle.min.js"></script>
         <script src="./JavaScript/script.js"></script>
+
     </body>
 </html>
