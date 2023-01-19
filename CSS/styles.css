@@ -115,7 +115,7 @@ img{
 .section__title{
     font-size: var(--h1--font-size);
     color: var(--first-color);
-    margin-bottom: var(--mb-1);
+    margin-bottom: 0.3rem;
 }
 .section__subtitle{
     display: block;
@@ -385,7 +385,7 @@ img{
 }
 
 .steps__title{
-    font-size: 2rem;
+    font-size: 0.937rem;
     font-weight: var(--font-medium);
 }
 
@@ -466,6 +466,7 @@ img{
     display: flex;
     flex-direction: column;
     gap:1.5rem;
+    row-gap: 2rem;
 }
 
 .advice__title{
@@ -485,6 +486,35 @@ img{
     gap: 1.5rem;
 }
 
+.container__common{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    color: #2F0A0D;
+    background-color: #2F0A0D;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.common__advice{
+    padding: 0.5rem;
+    background-color: #b1999b;
+    color: #3E0E12;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+#cat{
+    max-height: 300px;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+#cat_box{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
 .important{
     font-weight: 900;
     color: #fff;
@@ -500,6 +530,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .unorderlist_resource{
@@ -591,6 +622,11 @@ img{
 
 
 @media screen and (min-width:768px) {
+    
+    .steps__title{
+        font-size: 2rem;
+        font-weight: var(--font-medium);
+    }
 
     .introduction__container{
         grid-template-columns: 30% 70%;
