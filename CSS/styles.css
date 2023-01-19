@@ -312,7 +312,35 @@ img{
     text-align: center;
 }
 
+/* =============Good to know=============== */
+.good__container{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+}
 
+.good__information{
+    padding: 1rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    background-color: #524748;
+    color: #fbf9f9;
+}
+
+.good__title{
+    color: #000;
+}
+
+.good__container a{
+    display: inline;
+    color: #b1999b;
+}
+
+.good__container a:hover{
+    color: #3E0E12;
+}
 
 /* ===========STEPS============= */
 
@@ -357,7 +385,7 @@ img{
 }
 
 .steps__title{
-    font-size: var(--normal-font-size);
+    font-size: 2rem;
     font-weight: var(--font-medium);
 }
 
@@ -580,6 +608,34 @@ img{
         column-gap: 2rem;
     }
 
+    .good__container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    #first__info{
+        grid-column: 1/4;
+    }
+    
+    .second__info{
+        grid-column: 3/5;
+    }
+
+    .fifth__info{
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+
+    .third__info{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .fourth__info{
+        grid-column: 1/5;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -594,7 +650,7 @@ img{
     }
 
     .resource__box{
-        gap: 5rem;
+        gap: 2rem;
     }
     .swiper-portfolio-icon{
         font-size: 3.5rem;
