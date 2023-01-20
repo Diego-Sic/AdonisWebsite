@@ -243,6 +243,7 @@ img{
     align-items: center;
     justify-items: center;
     flex-direction: column;
+    justify-content: space-evenly;
 
 }
 
