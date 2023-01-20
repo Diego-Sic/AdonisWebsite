@@ -381,8 +381,8 @@ img{
 }
 
 .steps__title{
-    font-size: 0.937rem;
-    font-weight: var(--font-medium);
+    font-size: 0.8rem;
+    font-weight: 900;
 }
 
 .steps__subtitle{
