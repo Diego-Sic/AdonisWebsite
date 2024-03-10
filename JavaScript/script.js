@@ -56,7 +56,32 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 scrollActive();
+// Work part
+document.addEventListener("DOMContentLoaded", function () {
+  // Attach click event listeners to each filter option
+  const filterOptions = document.querySelectorAll(".work__item");
+  filterOptions.forEach(function (filterOption) {
+    filterOption.addEventListener("click", function () {
+      const selectedCategory = filterOption.getAttribute("data-category");
+      filterProjects(selectedCategory);
+    });
+  });
 
+  function filterProjects(category) {
+    // Retrieve all project cards
+    const projectCards = document.querySelectorAll(".work__card");
+    projectCards.forEach(function (card) {
+      // Retrieve the category of the current project card
+      const projectCategory = card.querySelector(".work__category").textContent;
+      // Compare project category with selected filter category
+      if (category === "Everything" || projectCategory === category) {
+        card.style.display = ""; // Show this card
+      } else {
+        card.style.display = "none"; // Hide this card
+      }
+    });
+  }
+});
 // Steps part
 
 const tabs = document.querySelectorAll("[data-target]");

@@ -547,6 +547,8 @@ img {
   overflow: hidden;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  width: 300px;
+  height: 300px;
 }
 
 .work__mask {
@@ -617,4 +619,167 @@ img {
 .work__card:hover .work__category {
   transform: translateY(0);
   opacity: 1;
+}
+
+.contact__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mb-2);
+}
+
+.contact__subtitle {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.contact__text {
+  margin-bottom: var(--mb-2);
+}
+
+.contact__form-group {
+  margin-bottom: var(--mb-3);
+}
+
+.contact__label {
+  display: block;
+  margin-bottom: var(--mb-1);
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
+
+.contact__input,
+.contact__input--textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--first-color-light);
+  background-color: var(--first-color-lighten);
+  color: var(--text-color);
+  resize: none;
+}
+
+.contact__input--textarea {
+  height: 150px;
+}
+
+.button {
+  background-color: var(--first-color);
+  color: var(--first-color-lighten);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--first-color-light);
+}
+
+.work__filters {
+  display: flex;
+  justify-content: space-around; /* Adjusts spacing between filter options */
+  align-items: center;
+  padding: 20px 0; /* Adds padding around the filter area for better spacing */
+}
+
+.work__item {
+  position: relative; /* Enables absolute positioning of pseudo-elements relative to this item */
+  padding: 10px; /* Adds space around the filter text */
+  cursor: pointer; /* Changes cursor to pointer to indicate clickable items */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.work__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px; /* Height of the underline */
+  background-color: currentColor; /* Uses the text color for the underline */
+  transform: scaleX(0); /* Initially scales the underline to 0 to hide it */
+  transition: transform 0.3s ease; /* Smooth transition for the underline effect */
+}
+
+.work__item:hover::after {
+  transform: scaleX(1); /* Scales the underline to full width on hover */
+}
+
+.work__item:hover {
+  color: var(
+    --first-color
+  ); /* Change #yourColorHere to your preferred hover color */
+}
+
+.work__thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust this value as needed */
+  width: 100%; /* Ensure the container fills its parent's width */
+  overflow: hidden;
+  position: relative; /* Establishes a stacking context for positioning child elements */
+}
+
+.work__img {
+  width: 100%; /* Stretch the image to cover the full width of the container */
+  height: 100%; /* Stretch the image to cover the full height of the container */
+  object-fit: cover; /* Ensures the image covers the area without distorting its aspect ratio */
+  display: block;
+}
+
+/* Existing CSS code remains unchanged up to the @media queries */
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .container,
+  .work__container {
+    width: 100%; /* Adjusts container width to be fully responsive on smaller screens */
+    padding: 0 15px; /* Adds padding to prevent content from touching the edges */
+  }
+
+  .work__container {
+    grid-template-columns: 1fr; /* Stacks the work cards on top of each other */
+    gap: 1rem; /* Adjusts the gap for a tighter layout on smaller screens */
+  }
+
+  .work__card {
+    width: 100%; /* Ensures work cards stretch to fill the container */
+    height: auto; /* Adjusts height automatically based on content */
+  }
+
+  .work__img {
+    object-fit: cover; /* Ensures images cover the area without losing aspect ratio */
+    height: 100%; /* Adjusts image height to fill the card */
+  }
+
+  .section,
+  .footer,
+  .home__container,
+  .contact__container {
+    padding: 2rem 0; /* Reduces the padding for sections on smaller screens for tighter spacing */
+  }
+
+  .nav__menu {
+    padding-top: var(
+      --header-height
+    ); /* Ensures nav menu padding accounts for dynamic header height */
+  }
+
+  .nav__link,
+  .footer__link,
+  .contact__input,
+  .contact__input--textarea,
+  .button {
+    font-size: var(
+      --small-font-size
+    ); /* Adjusts font size for better readability on smaller screens */
+  }
 }
